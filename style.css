@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.sky{
+    height: 50vh ;
+    width: 800vw;
+    background-image: url(background.jpg);
+    background-repeat: repeat-x;
+    position: absolute;
+    animation: carMove linear 6s infinite;
+}
+.trees{
+    height: 125vh;
+    width: 800vw;
+    background-image: url(trees.png);
+    position: absolute;
+    top: -190px;
+    background-repeat: repeat-x ;
+    animation: carMove linear 6s infinite;
+    
+}
+.track{
+    height: 30vh;
+    width: 800vw;
+    background-image: url(track.png);
+    position: absolute;
+    top: 70vh;
+    background-repeat: repeat-x ;
+    animation: carMove linear .6s infinite;
+}
+.car{
+    height: 75px;
+    width: 350px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: repeat-x ;
+    position: absolute;
+    left: 444px;
+    top: 424px;    
+}
+.wheel1 img{
+    width: 70px;
+    position: relative;
+    top: 460px;
+    left: 485px;
+    animation: wheelRotation linear .3s infinite;
+}
+
+.wheel2 img{
+    width: 70px;
+    position: relative;
+    top: 389px;
+    left: 661px;
+    animation: wheelRotation linear .3s infinite;
+}
+
+/* animations */
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carMove
+{
+    100%{
+        transform: translatex(-550vw);
+    }
+}
+@keyframes shake
+{
+    0%{
+        transform: translatey(-5px);
+    }
+    50%{
+        transform: translatey(5px);
+    }
+    100%{
+        transform: translatey(-5px);
+    }
+}
+@keyframes shakebody
+{
+    0%{
+        transform: translatey(-50px);
+    }
+    50%{
+        transform: translatey(50px);
+    }
+    100%{
+        transform: translatey(-50px);
+    }
+}
+/* media queries for small screen */
+
+@media only screen and (max-width:600px)
+{
+    .sky{
+        height: 50vh ;
+        width: 100%;
+        }
+        .trees{
+            height: 151vh;
+            width: 800vw;
+            top: -331px;                       
+        }
+        .track{
+            height: 44vh;
+            width: 800vw;
+            top: 61vh;
+            }
+            .car{
+                height: 85px;
+                width: 369px;
+                left: 100px;
+                top: 165px;    
+            }   
+
+            .wheel1 img{
+                width: 70px;
+                top: 205px;
+                left: 145px;
+                }
+                .wheel2 img{
+                    width: 70px;
+                    top: 133px;
+                    left: 330px;
+                    }
+}
